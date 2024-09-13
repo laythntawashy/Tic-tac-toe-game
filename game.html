@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة إكس أو</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- إضافة مكتبة Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <div class="game-container">
+        <div class="turn-container">
+            <div id="turnX" class="turn-box">Player 1 (X)</div>
+            <div id="turnO" class="turn-box">Player 2 (O)</div>
+        </div>
+        <div class="grid-container">
+            <!-- خلايا اللعبة -->
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+            <div class="cell" data-cell></div>
+        </div>
+        <!-- إضافة أيقونة الإعادة -->
+        <button id="reset" class="reset-button" style="display: none;">
+           إعادة اللعب <i class="fas fa-redo-alt"></i> 
+        </button>
+        
+        <!-- إضافة أيقونة العودة للصفحة الرئيسية -->
+        <button id="backToMenu" class="reset-button">
+            العودة إلى القائمة الرئيسية <i class="fas fa-home" style="margin-left: 3px;"></i>
+        </button>
+        
+        <div id="winnerDisplay" class="winner-display">
+            الفائز: <span id="winner"></span>
+        </div>
+        
+        <div class="score-container">
+            <div>Player 1 (X): <span id="scoreX">0</span></div>
+            <div>Player 2 (O): <span id="scoreO">0</span></div>
+        </div>
+        
+        <div class="timer-container">
+            <span>الوقت المتبقي: <span id="timer">10</span> ثوانٍ</span>
+        </div>
+        
+        <audio id="clickSound" src="click.wav"></audio>
+        <audio id="winSound" src="win2.wav"></audio>
+        <audio id="drawSound" src="win.wav"></audio>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
